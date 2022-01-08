@@ -22,7 +22,6 @@ public static class PlayerTransformSystem
 
         for (int i = 0; i < players.Length; i++)
         {
-
             var transform = playerTransforms.Get(step1Index, i);
             var transform2 = playerTransforms.Get(step2Index, i);
             var pos1 = transform.Position;
@@ -40,7 +39,6 @@ public static class PlayerTransformSystem
             Vector3 newDir = new(temp.z, 0, temp.w);
             players[i].transform.position = newPos;
             players[i].transform.rotation = Quaternion.LookRotation(newDir);
-
         }
     }
 }

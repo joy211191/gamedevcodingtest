@@ -3,6 +3,7 @@ using UnityEngine;
 
 public static class BallTransformSystem
 {
+
     public static void Run(GameObject ball)
     {
         var time = Data.HighlightTime;
@@ -25,7 +26,6 @@ public static class BallTransformSystem
         Vector3 newPos = Vector3.Lerp(pos1, pos2, stepProgress);
         newPos = Vector3.Scale(Data.PlayerScale, newPos);
         ball.transform.position = newPos;
-
 
         var rot1 = stepTransform.Rotation;//Direction;
         var rot2 = nextStepTransform.Rotation;
